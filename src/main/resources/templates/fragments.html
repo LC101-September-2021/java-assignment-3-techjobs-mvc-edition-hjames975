@@ -27,5 +27,22 @@
         </div>
     </div>
 
+<div th:fragment="job-results" class="job-results">
+    <table th:each= "job : ${jobs}">
+        <tr>
+            <td th:text= "${job.employer.getValue()}"></td>
+        </tr>
+        <tr>
+            <td th:text= "${job.location.getValue()}"></td>
+        </tr>
+        <tr>
+            <td th:text= "${job.positionType.getValue()}"></td>
+        </tr>
+        <tr>
+            <td th:text= "${job.coreCompetency.getValue()}"></td>
+        </tr>
+    </table>
+</div>
+
 </body>
 </html>
