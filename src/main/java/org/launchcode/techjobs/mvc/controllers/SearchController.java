@@ -34,17 +34,16 @@ public class SearchController {
     @PostMapping(value= "results")
     public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam String searchTerm) {
         ArrayList<Job> jobs;
-        if(searchTerm.equals("all")) {
+        if(searchTerm.equals("all") || searchTerm.equals(null)) {
             jobs = JobData.findAll();
-
         }
+
         else{
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
         }
             model.addAttribute("jobs", jobs);
-            model.addAttribute("columns", columnChoices);
+            model.addAttribute("columns", ListController.columnChoices);
             return "search";
-
     }
 
 }
