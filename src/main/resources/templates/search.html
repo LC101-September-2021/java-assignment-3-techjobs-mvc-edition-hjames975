@@ -38,6 +38,23 @@
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
 
+    <div th:replace= "fragments :: job-results"></div>
+
+<!--    <table th:each= "job : ${jobs}">-->
+<!--        <tr>-->
+<!--            <td th:text= "${job.employer.getValue()}"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td th:text= "${job.location.getValue()}"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td th:text= "${job.positionType.getValue()}"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td th:text= "${job.coreCompetency.getValue()}"></td>-->
+<!--        </tr>-->
+<!--    </table>-->
+
 </div>
 
 </body>
